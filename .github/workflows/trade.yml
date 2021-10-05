@@ -1,0 +1,47 @@
+# This is going to be a scheduled trade routine.
+name: Trade Routine
+
+on:
+  schedule:
+    - cron: "0 14 * * 1-5"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+
+    - name: Find cached env
+      id: find-venv
+      uses: actions/cache@v2
+      with:
+        path: env
+        key: venv-trade-${{ hashFiles('**/setup.py') }}
+        restore-keys: |
+          venv-build-
+          
+    - name: Create env
+      id: create-venv
+      if: steps.find-venv.outputs.cache-hit != 'true'
+      run: |
+        python -m venv env
+        source env/bin/activate
+        python -m pip install --upgrade pip tox
+
+    - name: Run routine
+      env:
+          MFA_KEY: ${{ secrets.MFA_KEY }}
+          RH_USERNAME: ${{ secrets.RH_U }}
+          RH_PASSWORD: ${{ secrets.RH_V }}
+          TG_CHAT_ID: ${{ secrets.TG_C }}
+          TG_BOT_TOKEN: ${{ secrets.TG_T }}
+      run: |
+        source env/bin/activate
+        tox -e routine
+

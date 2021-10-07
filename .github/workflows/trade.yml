@@ -48,6 +48,7 @@ jobs:
         git config --global user.email 'minibot@tr4d3r.com'
         # activate venv
         source env/bin/activate
+        python -m pip install -r requirements.txt
         # the actual trading workflow
         python routine.py minibot
         git add **/folio.json.*

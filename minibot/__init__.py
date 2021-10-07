@@ -5,11 +5,6 @@ from tr4d3r.backend.robinhood import (
 )
 from tr4d3r.core.trading import RealTimeEquilibrium
 from tr4d3r.core.notification import TelegramChat
-from credentials import (
-    TELEGRAM_BOT_TOKEN,
-    TELEGRAM_CHAT_ID,
-)
-import robin_stocks.robinhood as rh
 
 LOCAL_DIR = os.path.dirname(__file__)
 FOLIO_PATH_ROOT = os.path.join(LOCAL_DIR, "folio.json")
@@ -28,6 +23,6 @@ def get_manager():
 
 def get_chat():
     return TelegramChat(
-        bot_config={'token': TELEGRAM_BOT_TOKEN},
-        client_config={'chat_id': TELEGRAM_CHAT_ID},
+        bot_config={'token': os.environ['TG_BOT_TOKEN']},
+        client_config={'chat_id': os.environ['TG_CHAT_ID']},
     )

@@ -56,9 +56,10 @@ jobs:
         # the actual trading workflow
         python routine.py minibot
         git add **/folio.json.*
+        git add **/snapshots/*.*
         # a dummy to test other functionalities
-        python dummy.py
-        git add dummy_data/
+        #python dummy.py
+        #git add dummy_data/
         # commit and push
         git commit -m "Automated trade"
         git push

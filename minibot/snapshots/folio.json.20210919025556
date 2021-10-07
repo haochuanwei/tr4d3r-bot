@@ -1,0 +1,23 @@
+{
+    "class": "RobinhoodRealPortfolio",
+    "last_tick_time": "20210919 02:55:54.721512 +0000",
+    "principal": {
+        "class": "Cash",
+        "name": "USD",
+        "quantity": 77.4
+    },
+    "cash": {
+        "class": "Cash",
+        "name": "USD",
+        "quantity": 19.980000000000004
+    },
+    "items": {
+        "SPY": {
+            "class": "RobinhoodRealItem",
+            "name": "SPY",
+            "quantity": 0.140602,
+            "unit_cost": 408.37776091378504
+        }
+    },
+    "open_orders": []
+}

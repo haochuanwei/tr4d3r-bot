@@ -1,6 +1,6 @@
 {
     "class": "RobinhoodRealPortfolio",
-    "last_tick_time": "20210919 02:55:54.721512 +0000",
+    "last_tick_time": "20211007 09:47:42.770961 +0000",
     "principal": {
         "class": "Cash",
         "name": "USD",
@@ -19,5 +19,7 @@
             "unit_cost": 408.37776091378504
         }
     },
-    "open_orders": []
+    "open_orders": [
+        "615ec23e-3f8e-4bda-b953-2d1848ab7dea"
+    ]
 }

@@ -43,14 +43,18 @@ jobs:
           TG_CHAT_ID: ${{ secrets.TG_C }}
           TG_BOT_TOKEN: ${{ secrets.TG_T }}
       run: |
-        source env/bin/activate
-        # the actual trading workflow
-        #python routine.py minibot
-        # a dummy to test other functionalities
-        python dummy.py
+        # configure git
         git config --global user.name 'Minibot'
         git config --global user.email 'minibot@tr4d3r.com'
+        # activate venv
+        source env/bin/activate
+        # the actual trading workflow
+        python routine.py minibot
+        git add **/folio.json.*
+        # a dummy to test other functionalities
+        python dummy.py
         git add dummy_data/
-        git commit -m "Automated report"
+        # commit and push
+        git commit -m "Automated trade"
         git push
 

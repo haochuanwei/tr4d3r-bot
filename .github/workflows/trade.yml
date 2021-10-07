@@ -32,7 +32,8 @@ jobs:
       run: |
         python -m venv env
         source env/bin/activate
-        python -m pip install --upgrade pip tox
+        python -m pip install --upgrade pip
+        python -m pip install -r requirements.txt
 
     - name: Run routine
       env:
@@ -43,5 +44,5 @@ jobs:
           TG_BOT_TOKEN: ${{ secrets.TG_T }}
       run: |
         source env/bin/activate
-        tox -e routine
+        python routine.py
 

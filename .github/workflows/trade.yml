@@ -33,12 +33,12 @@ jobs:
         python -m venv env
         source env/bin/activate
         python -m pip install --upgrade pip
-        python -m pip install -r requirements.txt
+        python -m pip install --upgrade -r requirements.txt
 
     - name: Ensure dependencies
       run: |
         source env/bin/activate
-        python -m pip install -r requirements.txt
+        python -m pip install --upgrade -r requirements.txt
 
     - name: Run routine
       env:

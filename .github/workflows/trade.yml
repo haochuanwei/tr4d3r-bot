@@ -44,5 +44,13 @@ jobs:
           TG_BOT_TOKEN: ${{ secrets.TG_T }}
       run: |
         source env/bin/activate
-        python routine.py
+        # the actual trading workflow
+        #python routine.py minibot
+        # a dummy to test other functionalities
+        python dummy.py
+        git config --global user.name 'Minibot'
+        git config --global user.email 'minibot@tr4d3r.com'
+        git add dummy_data/
+        git commit -m "Automated report"
+        git push
 

@@ -33,7 +33,12 @@ jobs:
         python -m venv env
         source env/bin/activate
         python -m pip install --upgrade pip
-        python -m pip install -r requirements.txt
+        python -m pip install --upgrade -r requirements.txt
+
+    - name: Ensure dependencies
+      run: |
+        source env/bin/activate
+        python -m pip install --upgrade -r requirements.txt
 
     - name: Run routine
       env:
@@ -48,7 +53,6 @@ jobs:
         git config --global user.email 'minibot@tr4d3r.com'
         # activate venv
         source env/bin/activate
-        python -m pip install -r requirements.txt
         # the actual trading workflow
         python routine.py minibot
         git add **/folio.json.*

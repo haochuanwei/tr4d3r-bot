@@ -1,4 +1,4 @@
-git+https://github.com/phurwicz/tr4d3r.git
+tr4d3r
 robin_stocks
 pyotp
 plac

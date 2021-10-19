@@ -4,12 +4,12 @@
     "principal": {
         "class": "Cash",
         "name": "USD",
-        "quantity": 77.4
+        "quantity": 150.0
     },
     "cash": {
         "class": "Cash",
         "name": "USD",
-        "quantity": 19.910000000000004
+        "quantity": 92.510000000000004
     },
     "items": {
         "SPY": {

@@ -4,25 +4,39 @@
     "principal": {
         "class": "Cash",
         "name": "USD",
-        "quantity": 150.0
+        "quantity": 160.0
     },
     "cash": {
         "class": "Cash",
         "name": "USD",
-        "quantity": 92.51
+        "quantity": 90.51
     },
     "items": {
         "SPY": {
             "class": "RobinhoodRealItem",
             "name": "SPY",
-            "quantity": 0.140759,
-            "unit_cost": 408.41418186403706
-        }
+            "quantity": 0.140627,
+            "unit_cost": 408.42
+        },
+        "AAPL": {
+            "class": "RobinhoodRealItem",
+            "name": "AAPL",
+            "quantity": 0.05668,
+            "unit_cost": 124.65
+        },
+        "BILI": {
+            "class": "RobinhoodRealItem",
+            "name": "BILI",
+            "quantity": 0.026062,
+            "unit_cost": 72.14
+        },
+        "MSFT": {
+            "class": "RobinhoodRealItem",
+            "name": "MSFT",
+            "quantity": 0.007898,
+            "unit_cost": 265.89
+        },
     },
     "open_orders": [
-        "61715aa5-caaa-4952-a6f2-82c5217b7bc5",
-        "61715aa5-96ba-4521-ab18-8deb065668b0",
-        "61715aa4-cdfd-42b5-8515-920a66d8532b",
-        "61715aa6-4286-48b1-8832-e397e774b629"
     ]
 }

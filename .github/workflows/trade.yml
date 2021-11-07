@@ -50,7 +50,7 @@ jobs:
       run: |
         # configure git
         git config --global user.name 'Minibot'
-        git config --global user.email 'minibot@tr4d3r.com'
+        git config --global user.email 'haochuanwei@yahoo.com'
         # activate venv
         source env/bin/activate
         # the actual trading workflow

@@ -18,11 +18,10 @@ def get_portfolio():
 def get_manager():
     manager = RealTimeEquilibrium(
         equilibrium = {
-            'SPY': 0.4,
+            'SPY': 0.5,
             'BABA': 0.1,
             'BILI': 0.1,
             'AAPL': 0.1,
-            'MSFT': 0.1,
          },
     )
     return manager

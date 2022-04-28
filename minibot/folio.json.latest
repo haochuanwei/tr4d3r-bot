@@ -30,12 +30,6 @@
             "quantity": 0.556761,
             "unit_cost": 46.46523928883322
         },
-        "MSFT": {
-            "class": "RobinhoodRealItem",
-            "name": "MSFT",
-            "quantity": 0.049674,
-            "unit_cost": 314.25205701171666
-        },
         "SPY": {
             "class": "RobinhoodRealItem",
             "name": "SPY",

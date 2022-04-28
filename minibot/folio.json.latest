@@ -4,7 +4,7 @@
     "principal": {
         "class": "Cash",
         "name": "USD",
-        "quantity": 160.0
+        "quantity": 144.39
     },
     "cash": {
         "class": "Cash",

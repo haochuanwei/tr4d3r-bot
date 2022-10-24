@@ -3,7 +3,7 @@ from tr4d3r.backend.robinhood import (
     RobinhoodRealMarket,
     RobinhoodRealPortfolio,
 )
-from tr4d3r.core.trading import RealTimeEquilibrium
+from tr4d3r.core.trading import RealTimeEquilibrium, capped_daily_progression
 from tr4d3r.core.notification import TelegramChat
 
 LOCAL_DIR = os.path.dirname(__file__)
@@ -20,7 +20,10 @@ def get_manager():
         equilibrium = {
             'SPY': 0.5,
             'AAPL': 0.2,
-         },
+        },
+        params = {
+            'progression_func': lambda s: capped_daily_progression(s, step=0.5, cap=1.0),
+        },
     )
     return manager
 

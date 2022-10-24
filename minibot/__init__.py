@@ -19,9 +19,7 @@ def get_manager():
     manager = RealTimeEquilibrium(
         equilibrium = {
             'SPY': 0.5,
-            'BABA': 0.1,
-            'BILI': 0.1,
-            'AAPL': 0.1,
+            'AAPL': 0.2,
          },
     )
     return manager
